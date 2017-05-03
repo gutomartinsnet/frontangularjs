@@ -69,22 +69,12 @@ app.controller('UserCtrl', ['$scope', '$http', '$routeParams', function ($scope,
 
   console.log($routeParams.page)
   $scope.currentPage = $routeParams.page;
-  //console.log($routeParams)
-  //console.log("https://randomuser.me/api/?seed=foo&nat=br&page=" + ($scope.currentPage) + "&results="+ $scope.totalItems)
   $http({
     url: "https://randomuser.me/api/?seed=foo&nat=br&page=" + ($scope.currentPage) + "&results="+ $scope.totalItems,
-    //url: "https://randomuser.me/api/?seed=foo&nat=br&results="+ $scope.totalItems,
     params: $routeParams,
     method: "get"
   }).then(function (response) {
-    //console.log(response.data)
-    /*for (var i = 0; i <  $scope.totalItems; i++) {
-      $scope.project = response.data.results[i];
-      if ($scope.project.login.md5 === $routeParams.md5) {
-        //console.log($scope.project)
-        return $scope.project;
-      }
-    }*/
+
     angular.forEach(response.data.results, function(value, key){
       if(value.login.md5 === $routeParams.md5){
          $scope.project = response.data.results[key];
