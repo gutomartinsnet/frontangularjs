@@ -1,0 +1,60 @@
+<!-- Page Content -->
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-lg-12">
+            <h1 class="page-header">Detalhes
+                <small>do usuário</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#/">Home</a>
+                </li>
+                <li class="active">Detalhes do Usuário</li>
+            </ol>
+        </div>
+
+    </div>
+    <!-- /.row -->
+
+    <!-- Service Paragraphs -->
+
+    <div class="row">
+
+
+
+        <div class="col-sm-2">
+            <div class="block center">
+            <img class="img-responsive img-circle" src="{{project.picture.large}}"/>
+
+            <h3 class="text-center">{{project.name.first}} {{project.name.last}}</h3>
+            </div>
+        </div>
+
+        <div class="col-md-10">
+            <div class="list-group">
+                <a href="#" class="list-group-item"><i class="fa fa-circle-o"></i> Gênero: {{project.gender}}</a>
+                <a href="#" class="list-group-item"><i class="fa fa-map-marker"></i> Endereço: {{project.location.street}} - Cidade: {{project.location.city}} - Estado {{userDetail[0].location.state}} - CEP: {{userDetail[0].location.postcode}}</a>
+                <a href="maito:{{project.email}}" class="list-group-item"><i class="fa fa-envelope-o"></i> {{project.email}}</a>
+                <a href="#" class="list-group-item"><i class="fa fa-calendar"></i> Data de Nascimento: {{project.dob}}</a>
+                <a href="#" class="list-group-item"><i class="fa fa-phone"></i> Telefone: {{project.phone}}</a>
+                <a href="#" class="list-group-item"><i class="fa fa-mobile"></i> Celullar: {{project.cell}}</a>
+            </div>
+
+        </div>
+
+
+
+    </div>
+    <!-- /.row -->
+    <div class="row">
+        <div class="col-md-12">
+            <a href="#/" class="btn btn-sm btn-default">Voltar para Lista de Usuários</a>
+        </div>
+    </div>
+    <!-- /.row -->
+
+
+</div>
+<!-- /.container -->
